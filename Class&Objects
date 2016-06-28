@@ -11,6 +11,7 @@ class Car
 		void putdata();
 };
 
+/*Function definition below */
 int Car::acc(int speed=6)
 {	
 	speed+=10;
