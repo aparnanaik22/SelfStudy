@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+
+class Car
+{
+	private:
+		int tyres;
+	public:
+		int acc(int speed);		//function declaration (prototype)
+		void getdata(int data);
+		void putdata();
+};
+
+int Car::acc(int speed=6)
+{	
+	speed+=10;
+	return speed;
+}
+
+void Car::getdata(int data)
+{
+	tyres=data;
+}
+
+void Car::putdata()
+{
+	cout<<"Number of tyres is: "<<tyres<<"\n";
+}
+
+int main() 
+{
+	Car C1,C2;
+	int ans1=C1.acc(34);
+	//acc(int speed)
+	C1.getdata(4);		//Function call
+	C1.putdata();		//Function call
+	
+	C2.getdata(10);
+	C2.putdata();
+	
+	cout<<ans1<<" "<<C2.acc(20)<<"\n";
+	
+	return 0;
+}
