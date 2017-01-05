@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+class digit
+{
+	private:
+		int num;
+	public:
+		void sum();
+		void getdata();
+		
+};
+void digit::getdata()
+{
+	int num;
+	cin>>num;
+	cout<<"Enter an integer: ";
+	
+}
+void digit::sum()
+{
+	cout<<num<<"\n";
+		int rem,add=0;
+		while(num>0)
+		{
+			
+			rem=num%10;
+			add=add+rem;
+			num=num/10;
+		}		
+			cout<<"The sum of the given number is:"<<add<<"\n";		
+		
+}
+	
+
+int main() 
+{
+	
+	digit S;
+	S.getdata();
+	S.sum();
+	return 0;	
+}
+
