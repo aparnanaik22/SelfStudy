@@ -1,0 +1,86 @@
+#include <iostream>
+using namespace std;
+
+class student
+{
+	private:
+	char name;
+	int rollnumber;
+	public:
+	void get_test(float);
+	void get_sports(float);
+	void get_result(float);
+	void show_test();
+	void show_sports();
+	void display();
+};
+
+class test:public student
+{
+	private:
+	float test;
+	protected:
+	float exam;
+	public:
+	void get_marks(float T)
+	{
+		test=T;
+		exam=test;
+	}
+	void show_marks(void)
+	{
+		cout<<"Marks obtained are: "<<test<<"\n";
+		cout<<"Total marks are: 80 \n";
+	}
+};
+
+class sports
+{
+	private:
+	float score;
+	protected:
+	float PE;
+	public:
+	void get_score(float S)
+	{
+		score = S;
+		PE=score;
+	}
+	void show_score()
+	{
+		cout<<"Score is:"<<score<<"\n";
+		cout<<"Total score is: 20"<<"\n";
+	}
+};
+
+class result:public test,public sports
+{
+	protected:
+	float total;
+	public:
+	void display();
+};
+
+void result::display(void)
+{
+	
+		total=exam+PE;
+		
+		cout<<"Result is: "<<total<<"\n";
+		cout<<"out of: 100"<<"\n";
+}
+
+int main() 
+{
+	//test T;
+	result r;
+	r.get_marks(79.5);
+	r.show_marks();
+	sports S;
+	r.get_score(20);
+	r.show_score();
+	
+	r.display();
+	
+	return 0;
+}
