@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+	int a,b;
+	cin>>a>>b;
+	cout<<"The value of 'a' before swapping is="<<a<<"\n";
+	cout<<"The value of 'b' before swapping is="<<b<<"\n";
+	swap(a,b);
+	cout<<"The value of 'a' after swapping is="<<a<<"\n";
+	cout<<"The value of 'b' after swapping is="<<b<<"\n";
+	return 0;
+}
+void swap(int &x,int &y)
+{
+	int temp;
+	temp=x;
+	x=y;
+	y=temp;
+}
