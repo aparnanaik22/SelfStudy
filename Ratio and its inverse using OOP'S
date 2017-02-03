@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+class ratio
+{
+	int num,den;
+	public:
+	int assign(int,int);
+	void print();
+	void inverse();
+};
+int ratio::assign(int numerator, int denominator)
+{
+	num=numerator;
+	den=denominator;
+	cout<< "Numerator is: "<<num<<endl;
+	cout<< "Denominator is: "<<den<<endl;
+}
+void ratio::print()
+{
+	cout<<"Ratio is: "<<num<<"/"<<den<<endl;	
+	
+}
+void ratio::inverse()
+{
+	int s;
+	s=num;
+	num=den;
+	den=s;
+	cout<<"The inverse ratio is: "<<num<<"/"<<den<<endl;
+}
+int main() 
+{
+	ratio m;
+	m.assign(4,5);
+	m.print();
+	m.inverse();
+	return 0;
+}
