@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+class ratio
+{
+	public:
+	ratio()
+	{
+		cout<<"OBJECT IS CREATED";
+	}
+	~ratio()
+	{
+		cout<<endl<<"OBJECT DIED:(";
+	}
+};
+ 
+int main() {
+	ratio x;
+	cout<<"\n Now X is alive";
+	cout<<"\n Finished with the program";
+	return 0;
+}
