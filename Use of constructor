@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+class circle
+{
+	float x,y,r;
+	public:
+	circle(float a,float b,float c)
+	{
+		x=a;y=b;r=c;
+		cout<<"The entered coordinates are: "<<"x="<<x<<" y="<<y<<"\n";
+	}
+	void area(void)
+	{
+		float q=3.14*r*r;
+		cout<<"Area of the given circle is: "<<q<<endl;
+	}
+	void circumference(void)
+	{
+		float c=3.14*2*r;
+		cout<<"circumference of the given circle is: "<<c<<endl;
+	}
+};
+	
+int main() {
+	circle m(0,0,5);
+	m.area();
+	m.circumference();
+	return 0;
+}
