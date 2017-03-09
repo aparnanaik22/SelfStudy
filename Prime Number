@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+class prime
+{
+	private:
+	int num;
+	public:
+	void calculate();
+};
+void prime::calculate()
+{
+	int i,num,c=0;
+	cin>>num;
+	cout<<"The given number is: "<<num<<"\n";
+	{
+		if(num==1)
+		cout<<"The number is neither prime nor composite"<<endl;
+		else if(num==2)
+		cout<<"The number is prime.";
+	}
+	for(i=2;i<num;i++)
+	{
+		num%i==0;
+		c=1;
+	}
+	if(c==0)
+	cout<<"The number "<<num<<" is a prime number.";
+	else
+	cout<<"The number "<<num<<" is not a prime number.";
+
+}
+		
+int main() 
+{
+	prime p;
+	p.calculate();
+	return 0;
+}
