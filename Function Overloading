@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+float volume(float a)
+{
+	return (a*a*a);
+}
+float volume(float r,float h)
+{
+	return (3.14*r*r*h);
+}
+float volume(float l,float b,float h)
+{
+	return (l*b*h);
+}
+
+int main() 
+{
+	float p=volume(2.3);
+	float q=volume(2.50,3.32);
+	float m=volume(1.03,2.38,3.21);
+	cout<<"Volume of cube is: "<<p<<"\n";
+	cout<<"Volume of cylinder is: "<<q<<"\n";
+	cout<<"Volume of rectangular box is: "<<m<<"\n";
+	return 0;
+}
