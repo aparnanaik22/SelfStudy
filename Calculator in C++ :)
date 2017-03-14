@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+	float a,b,result;
+	result=0;
+	int calc;
+	cin>>a>>b;
+	cout<<"The numbers are: "<<a<<","<<b<<"\n";
+	cout<<"\n1-Addition \n2-Subtraction \n3-Multication \n4-Division \n";
+	cin>>calc;
+	cout<<"Enter your choice: "<<calc<<"\n";
+	switch(calc)
+	{
+		case 1: result=a+b;
+				cout<<"Addition of the numbers is: "<<result<<"\n";
+				break;
+		case 2: result=a-b;
+				cout<<"Subtraction of the numbers is: "<<result<<"\n";
+				break;
+		case 3: result=a*b;
+				cout<<"Multiplication of the numbers is: "<<result<<"\n";
+				break;
+		case 4: result=a/b;
+				cout<<"Division of the numbers is: "<<result<<"\n";
+				break;
+		default:cout<<"Invalid choice";
+				break;
+	}
+	
+	return 0;
+}
