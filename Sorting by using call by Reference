@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+void sort(int*,int*);
+
+int main() 
+{
+	int a[10],i,j;
+	cout<<"Enter the ten numbers \n";
+	for(i=0;i<=10;i++)
+	{
+		cin>>a[i];
+	}
+	cout<<"\nAfter sort\n";
+	for(i=1;i<=9;i++)
+	{
+		for(j=0;j<=(10-i);j++)
+		{
+			sort(&a[j],&a[j+1]);
+		}
+	}
+	for(i=0;i<=9;i++)
+	{
+		cout<<a[i]<<endl;
+	}
+	return 0;
+}
+void sort(int *x,int *y)
+{
+	int temp;
+	if(*x<*y)
+	{
+		temp=*x;
+		*x=*y;
+		*y=temp;
+	}
+}
