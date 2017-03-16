@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+double power(double X,int n)
+{
+	if(X==0)
+		return 0;
+	if(n==0)
+		return 1;
+	double y=1;
+	for(int i=0;i<n;i++)
+		y=y*X;
+		cout<<y<<endl;
+	for(int i=0;i>n;i--)
+		y=y/X;
+		cout<<y<<endl;
+	return y;
+}
+int main() 
+{
+	double X;
+	int n;
+	cin>>X;
+	cout<<"Enter the values of X"<<X<<endl;
+	cin>>n;
+	cout<<"Enter the value of n"<<n<<endl;
+	cout<<"The result is:"<<power(X,n);
+	return 0;
+}
