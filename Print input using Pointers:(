@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+	int a[10],i,*ptr;
+	cout<<"Enter 10 numbers:"<<endl;
+	for(i=0;i<=9;i++)
+	{
+		cin>>a[i];
+	}
+	ptr=&a[0];
+	cout<<"\nThe numbers are: \n";
+	for(i=0;i<=9;i++)
+	{
+		cout<<*ptr<<"\n";
+		ptr++;
+	}
+	return 0;
+}
